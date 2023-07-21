@@ -91,7 +91,11 @@
   --pod-network-cidr=172.16.0.0/16 \
   --cri-socket unix:///run/containerd/containerd.sock
   ```
-  This command will take some time to execute, and will output a `kubeadm join` command that can be used by worker nodes to connect to the master.
+  This command will take some time to execute, and will output a `kubeadm join` command that can be used by worker nodes to connect to the master. `kudeadm join` command looks like this:
+  ```
+  kubeadm join {MASTER_NODE_IP}:6443 --token [KUBE_TOKEN] \
+    --discovery-token-ca-cert-hash sha256:c692fb049u15883b575bd6710779db5c5af8073f7cab460lod181yr3ddb29a18
+  ```
    
 12. To regenerate the `kubeadm join` command, run this on master node:
   
