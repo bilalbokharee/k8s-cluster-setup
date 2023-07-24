@@ -112,3 +112,8 @@
   sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
   sudo chown $(id -u):$(id -g) $HOME/.kube/config
   ```
+
+14. To install Calico network overlay, run the following command:
+  ```
+  kubectl apply -f https://raw.githubusercontent.com/bilalbokharee/k8s-cluster-setup/main/metallb-with-calico.yaml
+  ```
